@@ -1,13 +1,13 @@
-import HomeTemplate from '../src/components/templates/Home'
+import ErrorTemplate from '../src/components/templates/Error'
 import Page from '../src/components/templates/Page'
 import style from '../styles/index.module.css'
 
-const Home = () => {
+const Error = () => {
   return (
     <Page>
-      <HomeTemplate />
+      <ErrorTemplate />
     </Page>
   )
 }
 
-export default Home
+export default Error
