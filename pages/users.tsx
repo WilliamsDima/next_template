@@ -1,11 +1,8 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import Page from '../src/components/templates/Page'
 import UsersTemplate from '../src/components/templates/Users'
-
-type User = {
-  id: number,
-  name: string
-}
+import { useActions } from '../src/hooks/hooks'
+import { User } from '../src/store/redusers/main/types'
 
 interface IUsers {
   data: User[]
@@ -13,16 +10,24 @@ interface IUsers {
 
 const Users: FC<IUsers> = ({data}) => {
 
+  const { setUsers } = useActions()
+
+  useEffect(() => {
+
+    setUsers(data)
+    
+  }, [])
+
   return (
     <Page>
-      <UsersTemplate data={data}/>
+      <UsersTemplate />
     </Page>
   )
 }
 
 export default Users
 
-export async function getStaticProps(context: any) {
+export async function getStaticProps() {
 
   const res = await fetch('https://jsonplaceholder.typicode.com/users')
   const data = await res.json()

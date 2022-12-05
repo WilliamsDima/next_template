@@ -1,3 +1,4 @@
+import { GetServerSideProps } from 'next'
 import { FC } from 'react'
 import Page from '../../src/components/templates/Page'
 import UserTemplate from '../../src/components/templates/User'
@@ -22,7 +23,7 @@ const User: FC<IUser> = ({user}) => {
 
 export default User
 
-export async function getServerSideProps({query}) {
+export const getServerSideProps: GetServerSideProps = async ({ query }) =>{
 
   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${query?.id}`)
   const user = await res.json()

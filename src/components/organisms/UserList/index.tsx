@@ -1,21 +1,15 @@
 import Link from "next/link"
 import { FC } from "react"
+import { useAppSelector } from "../../../hooks/hooks"
 import styles from './style.module.scss'
 
-type User = {
-  id: number,
-  name: string
-}
+const UserList: FC = () => {
 
-interface IUsers {
-  data: User[]
-}
-
-const UserList: FC<IUsers> = ({data}) => {
+  const { users } = useAppSelector(store => store.main)
 
   return (
     <ul className={styles.list}>
-        {data?.map((item) => {
+        {users?.map((item) => {
           return <li key={item.id}>
             <Link href={`/users/${item.id}`}>
               {item.name}

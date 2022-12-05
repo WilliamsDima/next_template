@@ -2,16 +2,8 @@ import React, { FC } from "react"
 import UserList from "../../organisms/UserList"
 import styles from './style.module.scss'
 
-type User = {
-  id: number,
-  name: string
-}
 
-interface IPage {
-  data: User[]
-}
-
-const UsersTemplate: FC<IPage> = ({data}) => {
+const UsersTemplate: FC = () => {
 
 
   return (
@@ -20,7 +12,7 @@ const UsersTemplate: FC<IPage> = ({data}) => {
         Пользователи:
       </div>
 
-      <UserList data={data}/>
+      <UserList />
     </div>
   )
 }
