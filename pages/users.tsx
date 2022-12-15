@@ -2,7 +2,7 @@ import { FC, useEffect } from 'react'
 import Page from '../src/components/templates/Page'
 import UsersTemplate from '../src/components/templates/Users'
 import { useActions } from '../src/hooks/hooks'
-import { User } from '../src/store/redusers/main/types'
+import { User } from '../src/stores/redusers/main/types'
 
 interface IUsers {
   data: User[]

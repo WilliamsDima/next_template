@@ -9,7 +9,7 @@ const UserList: FC = () => {
 
   return (
     <ul className={styles.list}>
-        {users?.map((item) => {
+        {users?.map((item: any) => {
           return <li key={item.id}>
             <Link href={`/users/${item.id}`}>
               {item.name}

@@ -20,9 +20,6 @@ time, mark, audio, video {
 }
 
 /* make sure to set some focus styles for accessibility */
-:focus {
-    outline: 0;
-}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -124,11 +121,6 @@ html {
  * Address `outline` inconsistency between Chrome and other browsers.
  */
 
- 
-a {
-    text-decoration: none;
-}
-
 a:focus {
     outline: none;
 }
@@ -198,14 +190,16 @@ legend {
  * 3. Improve appearance and consistency in all browsers.
  */
 
-button,
-input,
-select,
-textarea {
+ input,
+ textarea,
+ button,
+ select,
+ a {
     font-size: 100%; /* 1 */
     margin: 0; /* 2 */
     vertical-align: baseline; /* 3 */
     *vertical-align: middle; /* 3 */
+    -webkit-tap-highlight-color: transparent;
 }
 
 /**

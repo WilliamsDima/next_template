@@ -1,3 +1,35 @@
+Шаблон для разработки мобильных приложений на Next js
+
+---
+
+## Techstack
+[![typescript](https://img.shields.io/static/v1?label=typescript&message=4.8.4&color=3178C6&style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![node](https://img.shields.io/static/v1?label=node&message=14.5.0&color=026E00&style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/)
+[![react](https://img.shields.io/static/v1?label=react&message=18.2.0&color=61DBFB&style=for-the-badge&logo=react&logoColor=white)](https://ru.reactjs.org/)
+[![redux](https://img.shields.io/static/v1?label=redux&message=4.2.0&color=764ABD&style=for-the-badge&logo=redux&logoColor=white)](https://redux-toolkit.js.org/)
+[![reduxtoolkit](https://img.shields.io/static/v1?label=redux%20toolkit&message=1.9.0&color=764ABD&style=for-the-badge&logo=redux&logoColor=white)](https://redux-toolkit.js.org/)
+[![tailwindcss](https://img.shields.io/static/v1?label=tailwindcss&message=3.2.2&color=38BDF8&style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![sass](https://img.shields.io/static/v1?label=sass&message=7.0.3&color=BF4080&style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)
+
+
+---
+
+## Работа с шаблоном
+паттерны:
+- `hooks` - дирректория, которая хранит в себе кастомные хуки и хэперы.
+
+Также, в шаблоне структурированы компоненты по Atomic Design. Компоненты деляться на:
+
+- `/atoms/*` – тут расположены примитивные компоненты: кнопки, заголовки, поля ввода и пр.
+- `/molecules/*` – тут расположены связки/группы примитивов: группы кнопок, карточки и пр.
+- `/organisms/*` – тут расположены связки/группы молекул. То есть компоненты, которая состоит из молекул, которые состоят из примитивов: шапка, списки карточек, модальные окна и пр.
+- `/templates/*` – тут расположены шаблоны страницы
+
+Подробнее можно почитать:
+
+- [Atomic Design Methodology](https://atomicdesign.bradfrost.com/chapter-2/)
+- [Atomic Design in practice](https://blog.ippon.tech/atomic-design-in-practice/)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
